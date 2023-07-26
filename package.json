@@ -1,0 +1,11 @@
+{
+  "name": "franklin-live-preview",
+  "version": "0.0.1",
+  "description": "Live preview of word documents as html pages using Franklin's converters",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
