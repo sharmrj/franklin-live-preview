@@ -3,9 +3,16 @@
   "version": "0.0.1",
   "description": "Live preview of word documents as html pages using Franklin's converters",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@adobe/helix-docx2md": "^1.4.11",
+    "@adobe/helix-html-pipeline": "^4.1.0",
+    "github-slugger": "^2.0.0",
+    "hast-util-to-html": "^8.0.4"
+  }
 }
