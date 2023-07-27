@@ -20,6 +20,7 @@ import { readFileSync, writeFileSync, watchFile } from 'node:fs';
 import { toHtml } from 'hast-util-to-html';
 import GithubSlugger from 'github-slugger';
 import { execSync } from 'child_process';
+import liveserver from 'live-server';
 
 function setDummyMetadata(state) {
   state.content = {
@@ -109,12 +110,17 @@ const doTheThing = () => {
 }
 
 execSync('rm -rf helpx-internal');
-execSync('git clone https://github.com/adobecom/helpx-internal.git', {
+execSync('git clone -b stage https://github.com/adobecom/helpx-internal.git', {
   stdio: [0, 1, 2], // we need this so node will print the command output
   cwd: '.', // path to where you want to save the file
-})
+});
 
 doTheThing();
+
+liveserver.start({
+  root: 'helpx-internal',
+  file: 'out.html',
+});
 
 watchFile(docx ,() => {
   console.log('Change Detected');

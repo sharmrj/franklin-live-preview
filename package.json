@@ -13,6 +13,7 @@
     "@adobe/helix-docx2md": "^1.4.11",
     "@adobe/helix-html-pipeline": "^4.1.0",
     "github-slugger": "^2.0.0",
-    "hast-util-to-html": "^8.0.4"
+    "hast-util-to-html": "^8.0.4",
+    "live-server": "^1.2.2"
   }
 }
